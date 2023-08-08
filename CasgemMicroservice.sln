@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontends", "Frontends", "{A6B65FB2-462E-4BF9-BE91-664CEB7A6295}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateways", "Gateways", "{DBF822B5-E233-4568-B1B9-4C48CB217B6D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer", "IdentityServer", "{F5DCBB4D-67C3-4021-8A66-4573C7BEA1DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{CA39FAF8-ED43-4685-B11F-AFAE8BBF8B6B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{83574672-BB92-4B8B-B588-603C8F35FFB5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{23CE754F-7098-4053-83F9-1B5BDA11BE3D}"
+	ProjectSection(SolutionItems) = preProject
+		PortNumbers.txt = PortNumbers.txt
+		ToDoList.txt = ToDoList.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{8BB23C37-5A48-4D2C-9B76-2784B856977F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{87B85E7F-9F4F-45FF-B796-2E983DEFDC27}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Discount", "Discount", "{6F096D53-CB1C-41A8-9029-7BF1C859E0B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Payment", "Payment", "{396FC376-5B09-466B-92C4-C2E9DD5A1044}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Order", "Order", "{81E66CF0-2F2E-4228-B344-5483F23B95E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cargo", "Cargo", "{FB9B268F-F104-4E65-ABDF-1DBD41FA843D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PhotoStock", "PhotoStock", "{3EA9FA9A-438E-4474-8424-4995649D23FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasgemMicroservice.Services.Catalog", "Services\Catalog\CasgemMicroservice.Services.Catalog\CasgemMicroservice.Services.Catalog.csproj", "{65059C51-3072-46BC-89D0-4A80B832DDA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasgemMicroservice.Shared", "Shared\CasgemMicroservice.Shared\CasgemMicroservice.Shared.csproj", "{38EF0DFA-369A-4BF6-894F-CD3BDD0692AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65059C51-3072-46BC-89D0-4A80B832DDA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65059C51-3072-46BC-89D0-4A80B832DDA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65059C51-3072-46BC-89D0-4A80B832DDA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65059C51-3072-46BC-89D0-4A80B832DDA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38EF0DFA-369A-4BF6-894F-CD3BDD0692AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38EF0DFA-369A-4BF6-894F-CD3BDD0692AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38EF0DFA-369A-4BF6-894F-CD3BDD0692AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38EF0DFA-369A-4BF6-894F-CD3BDD0692AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8BB23C37-5A48-4D2C-9B76-2784B856977F} = {83574672-BB92-4B8B-B588-603C8F35FFB5}
+		{87B85E7F-9F4F-45FF-B796-2E983DEFDC27} = {83574672-BB92-4B8B-B588-603C8F35FFB5}
+		{6F096D53-CB1C-41A8-9029-7BF1C859E0B5} = {83574672-BB92-4B8B-B588-603C8F35FFB5}
+		{396FC376-5B09-466B-92C4-C2E9DD5A1044} = {83574672-BB92-4B8B-B588-603C8F35FFB5}
+		{81E66CF0-2F2E-4228-B344-5483F23B95E2} = {83574672-BB92-4B8B-B588-603C8F35FFB5}
+		{FB9B268F-F104-4E65-ABDF-1DBD41FA843D} = {83574672-BB92-4B8B-B588-603C8F35FFB5}
+		{3EA9FA9A-438E-4474-8424-4995649D23FB} = {83574672-BB92-4B8B-B588-603C8F35FFB5}
+		{65059C51-3072-46BC-89D0-4A80B832DDA2} = {87B85E7F-9F4F-45FF-B796-2E983DEFDC27}
+		{38EF0DFA-369A-4BF6-894F-CD3BDD0692AD} = {CA39FAF8-ED43-4685-B11F-AFAE8BBF8B6B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7EFD9EC-05B9-4566-AE7D-0E6545F9C9C6}
+	EndGlobalSection
+EndGlobal
