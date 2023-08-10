@@ -21,10 +21,10 @@ namespace CasgemMicroservice.Services.Discount.Services
         public async Task<Response<NoContent>> CreateDiscountCouponsAsync(CreateDiscountDto createDiscountDto)
         {
             var createCoupon = _mapper.Map<DiscountCoupons>(createDiscountDto);
-            createCoupon.CreatedTime= DateTime.Now;
+            createCoupon.CreatedTime = DateTime.Now;
             await _dapperContext.DiscountCouponses.AddAsync(createCoupon);
-             await  _dapperContext.SaveChangesAsync();
-              return  Response<NoContent>.Success(201);   
+            await _dapperContext.SaveChangesAsync();
+            return Response<NoContent>.Success(201);
 
         }
 

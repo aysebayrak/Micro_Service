@@ -17,7 +17,7 @@ namespace CasgemMicroservice.Services.Discount.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserID = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Rate = table.Column<int>(type: "int", nullable: false),
-                    Code = table.Column<int>(type: "int", nullable: false),
+                    Code = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedTime = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
