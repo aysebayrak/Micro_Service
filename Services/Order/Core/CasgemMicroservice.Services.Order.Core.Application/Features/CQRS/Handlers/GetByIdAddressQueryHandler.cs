@@ -13,22 +13,21 @@ using System.Threading.Tasks;
 
 namespace CasgemMicroservice.Services.Order.Core.Application.Features.CQRS.Handlers
 {
-    public class GetAllAddressQueryHandler :IRequestHandler<GetAllAddressQueryRequest , List<ResultAddressDto>>
+    public class GetByIdAddressQueryHandler : IRequestHandler<GetByIdAddressQueryRequest, ResultAddressDto>
     {
         private readonly IRepository<Address> _repository;
         private readonly IMapper _mapper;
 
-        public GetAllAddressQueryHandler(IMapper mapper, IRepository<Address> repository)
+        public GetByIdAddressQueryHandler(IRepository<Address> repository, IMapper mapper)
         {
-            _mapper = mapper;
             _repository = repository;
+            _mapper = mapper;
         }
 
-
-        public async Task<List<ResultAddressDto>> Handle(GetAllAddressQueryRequest request, CancellationToken cancellationToken)
+        public async Task<ResultAddressDto> Handle(GetByIdAddressQueryRequest request, CancellationToken cancellationToken)
         {
-            var values = await _repository.GetAllAsync();
-            return _mapper.Map<List<ResultAddressDto>>(values);
+            var result = await _repository.GetByIdAsync(request.Id);
+            return _mapper.Map<ResultAddressDto>(result);
         }
     }
 }
