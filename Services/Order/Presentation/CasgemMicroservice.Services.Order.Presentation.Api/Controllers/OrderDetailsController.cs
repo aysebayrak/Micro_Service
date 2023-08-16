@@ -21,7 +21,9 @@ namespace CasgemMicroservice.Services.Order.Presentation.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> OrderDetailList()
         {
+
             var values = await _mediator.Send(new GetAllOrderDetailQueryRequest());
+         
             return Ok(values);
 
         }

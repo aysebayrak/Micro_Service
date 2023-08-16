@@ -13,5 +13,7 @@ namespace CasgemMicroservice.Services.Order.Core.Application.Dtos.OrderDetailDto
         public decimal ProductPrice { get; set; }
         public int ProductAmount { get; set; }
         public int OrderingID { get; set; }
+
+      
     }
 }

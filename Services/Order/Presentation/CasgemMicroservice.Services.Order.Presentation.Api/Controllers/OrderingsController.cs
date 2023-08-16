@@ -1,5 +1,6 @@
 ﻿using CasgemMicroservice.Services.Order.Core.Application.Features.CQRS.Commands;
 using CasgemMicroservice.Services.Order.Core.Application.Features.CQRS.Queries;
+using CasgemMicroservice.Shared.Services;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,13 +12,15 @@ namespace CasgemMicroservice.Services.Order.Presentation.Api.Controllers
     public class OrderingsController : ControllerBase
     {
         private readonly IMediator _mediator;
+        private readonly ISharedIdentityService _shareIdentityService;
 
-        public OrderingsController(IMediator mediator)
+        public OrderingsController(IMediator mediator, ISharedIdentityService shareIdentityService)
         {
             _mediator = mediator;
+            _shareIdentityService = shareIdentityService;
         }
 
-        [HttpGet]
+       
         [HttpGet]
         public async Task<IActionResult> OrderingList()
         {
@@ -61,5 +64,15 @@ namespace CasgemMicroservice.Services.Order.Presentation.Api.Controllers
             return Ok("Sipariş Silindi");
         }
 
+        [HttpGet("orderinggetuser")]
+        public async Task<IActionResult> OrderingGetUser()
+        {
+            var response = await _mediator.Send(new GetOrderingByUserIdQuery
+            {
+                Id = _shareIdentityService.GetUserID
+            });
+
+            return Ok(response);
+        }
     }
 }

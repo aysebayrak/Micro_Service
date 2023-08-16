@@ -16,5 +16,6 @@ namespace CasgemMicroservice.Services.Order.Core.Application.Features.CQRS.Queri
         }
 
         public int Id { get; set; }
+       
     }
 }

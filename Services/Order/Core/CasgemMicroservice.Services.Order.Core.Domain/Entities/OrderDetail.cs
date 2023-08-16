@@ -15,6 +15,8 @@ namespace CasgemMicroservice.Services.Order.Core.Domain.Entities
         public int ProductAmount { get; set; }
         public int OrderingID { get; set; }
         public Ordering Ordering { get; set; }
+        
+
 
 
 

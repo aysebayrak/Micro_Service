@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -41,7 +42,12 @@ namespace CasgemMicroservice.Services.Order.Infrastructure.Persistance.Repositor
         {
             return await _context.Set<T>().FindAsync(id);
 
-        } 
+        }
+
+        public async Task<List<T>> GetOrdersById(Expression<Func<T, bool>> filter = null)
+        {
+            return await _context.Set<T>().Where(filter).ToListAsync(); 
+        }
 
         public async Task<T> UpdateAsync(T entity)
         {
